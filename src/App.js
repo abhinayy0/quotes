@@ -22,7 +22,16 @@ class App extends React.Component {
 
   render() {
     const { quote } = this.state;
-    return <h1>{quote}</h1>;
+    return (
+      <div className="app">
+        <div className="card">
+          <h1 className="heading">{quote}</h1>
+          <button className="button" onClick={this.fetchQuote}>
+            <span> Another Quote! </span>
+          </button>
+        </div>
+      </div>
+    );
   }
 }
 
